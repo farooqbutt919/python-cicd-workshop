@@ -2,10 +2,10 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.5.0
 jobs:
-  build_test:
-    docker:
+  build_test: #Give ur job a name. 
+    docker:  #where u want to run the job. called executor. it executes the code. 4 executors: docker, macos, machine (full blown linux or VM- where more horse power is required), windows 
       - image: circleci/python:3.9 
-    steps:
+    steps: #actual commands thats going to run.
       - checkout
       - run:
           name: Install Python Dependencies
